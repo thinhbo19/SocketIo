@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 const io = new Server({
   cors: {
     // origin: "http://localhost:3000",
-    origin: process.env.NEXT_PUBLIC_SOCKET_URL,
+    origin: "https://socketio-production-62db.up.railway.app",
     methods: ["GET", "POST"],
   },
 });
