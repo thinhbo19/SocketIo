@@ -2,7 +2,7 @@ const { Server } = require("socket.io");
 
 const io = new Server({
   cors: {
-    origin: "https://shoesstore-c5rcxvklq-thinhbo19s-projects.vercel.app",
+    origin: "https://shoesstore-thinhbo19s-projects.vercel.app",
     methods: ["GET", "POST"],
   },
 });
