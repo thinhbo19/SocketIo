@@ -2,8 +2,7 @@ const { Server } = require("socket.io");
 
 const io = new Server({
   cors: {
-    // origin: "http://localhost:3000",
-    origin: "https://socketio-production-62db.up.railway.app",
+    origin: "https://shoesstore-c5rcxvklq-thinhbo19s-projects.vercel.app",
     methods: ["GET", "POST"],
   },
 });
