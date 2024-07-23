@@ -1,22 +1,9 @@
-const express = require("express");
 const { Server } = require("socket.io");
-const cors = require("cors");
 
-const app = express();
-app.use(
-  cors({
-    origin: "https://shoesstore-omgieh5gv-thinhbo19s-projects.vercel.app",
-    methods: ["GET", "POST"],
-  })
-);
-
-const server = app.listen(3001, () => {
-  console.log("Server is running on port 3001");
-});
-
-const io = new Server(server, {
+const io = new Server({
   cors: {
-    origin: "https://shoesstore-omgieh5gv-thinhbo19s-projects.vercel.app",
+    // origin: "http://localhost:3000",
+    origin: "https://socketio-production-62db.up.railway.app",
     methods: ["GET", "POST"],
   },
 });
@@ -54,3 +41,5 @@ io.on("connection", (socket) => {
     io.emit("getOnlineUser", onlineUser);
   });
 });
+
+io.listen(3001);
