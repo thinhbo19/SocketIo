@@ -6,9 +6,7 @@ const io = new Server({
     methods: ["GET", "POST"],
   },
 });
-
 let onlineUser = [];
-
 io.on("connection", (socket) => {
   console.log("new connect", socket.id);
 
