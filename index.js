@@ -1,12 +1,8 @@
 const { Server } = require("socket.io");
 
-const urlClient =
-  "https://shoesstore-thinhbo19s-projects.vercel.app" ||
-  "https://shoesstore-ten.vercel.app";
-
 const io = new Server({
   cors: {
-    origin: urlClient,
+    origin: "https://shoesstore-ten.vercel.app",
     methods: ["GET", "POST"],
   },
 });
